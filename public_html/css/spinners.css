@@ -1,0 +1,54 @@
+body,html{margin:0;padding:0;}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to { 
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to { 
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.wrapper{
+    width:80%;
+    text-align:center;
+    margin:24% auto;
+}
+
+#spinner1 div {
+    border: 3px solid #000; 
+    display: inline-block;
+    min-width: 1em;
+    min-height: 1em; 
+    padding: 0.4em;
+    border-radius: 50%; 
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    -webkit-animation-name: rotate; 
+    -webkit-animation-duration: 5s; 
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    
+    animation-name: rotate; 
+    animation-duration: 5s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#spinner1 div.odd {
+    border-top-color: black; 
+    border-bottom-color: black;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
